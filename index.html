@@ -8,37 +8,57 @@
   <title>Turtle Pizza!</title>
 </head>
 <body>
-  <form id="custom">
-    <select id="size">
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-    </select><br>
-    <input type="checkbox" name="custompie" value="Pepperoni">Pepperoni<br>
-    <input type="checkbox" name="custompie" value="Sausage">Sausage<br>
-    <input type="checkbox" name="custompie" value="Pineapple">Pineapple<br>
-    <input type="checkbox" name="custompie" value="Mama Lil's">Mama Lil's<br>
-    <input type="checkbox" name="custompie" value="Mushrooms">Mushrooms<br>
-    <input type="checkbox" name="custompie" value="Olives">Olives<br>
-    <input type="checkbox" name="custompie" value="Red Onion">Red Onion<br>
-    <button type="button" id="newpie">Add Pizza!</button>
-  </form>
-  <form id="house">
-    <select id="pizza">
-      <option>Leo</option>
-      <option>Mikey</option>
-      <option>Donnie</option>
-      <option>Raph</option>
-    </select>
-    <select id="housesize">
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-    </select>
-    <button type="button" id="housepie">Add Pizza!</button>
-  </form>
-  <ul id="order">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="formone">
+          <h2>Make your own pie!</h2>
+          <form id="custom">
+            <select id="size">
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select><br>
+            <input type="checkbox" name="custompie" value="Pepperoni">Pepperoni<br>
+            <input type="checkbox" name="custompie" value="Sausage">Sausage<br>
+            <input type="checkbox" name="custompie" value="Pineapple">Pineapple<br>
+            <input type="checkbox" name="custompie" value="Mama Lil's">Mama Lil's<br>
+            <input type="checkbox" name="custompie" value="Mushrooms">Mushrooms<br>
+            <input type="checkbox" name="custompie" value="Olives">Olives<br>
+            <input type="checkbox" name="custompie" value="Red Onion">Red Onion<br>
+            <button type="button" id="newpie">Add Pizza!</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="order">
+          <ul id="order">
 
-  </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="formtwo">
+          <h2>Or try one of ours!</h2>
+          <form id="house">
+            <select id="pizza">
+              <option>Leo</option>
+              <option>Mikey</option>
+              <option>Donnie</option>
+              <option>Raph</option>
+            </select>
+            <br>
+            <select id="housesize">
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+            <br>
+            <button type="button" id="housepie">Add Pizza!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

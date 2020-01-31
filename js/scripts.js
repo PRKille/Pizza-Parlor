@@ -79,6 +79,7 @@ $(document).ready(function(){
     order.addPizza(pizza);
     order.displayOrder();
   });
+
   $("#newpie").click(function(event){
     var pizza = new Pizza($("#size").val());
     $("input[name=custompie]:checked").each(function() {
@@ -89,8 +90,8 @@ $(document).ready(function(){
     order.addPizza(pizza);
     order.displayOrder();
   });
+  
   $("ul#order").on("click", "li", function() {
-    console.log(this.id);
     delete order.pizzas[this.id -1];
     order.displayOrder();
   })
