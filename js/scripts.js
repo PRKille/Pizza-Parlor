@@ -19,7 +19,6 @@ Order.prototype.assignNum = function() {
 //Display Prototype
 Order.prototype.displayOrder = function() {
   var order = $("ul#order");
-  var htmlOrder = "<h3>Your Order is:</h3>";
   this.pizzas.forEach(function(pizza) {
     htmlOrder += "<li id=" + pizza.num + ">" + pizza.size + " " + pizza.toppings + " $" + pizza.price + "</li>"
   });
@@ -90,7 +89,7 @@ $(document).ready(function(){
     order.addPizza(pizza);
     order.displayOrder();
   });
-  
+
   $("ul#order").on("click", "li", function() {
     delete order.pizzas[this.id -1];
     order.displayOrder();

@@ -1,14 +1,43 @@
 html body {
+  min-height: max-content;
+  margin: 0;
+}
+
+.bg {
   background-image: url(../img/turtleback.jpg);
-  /* background-position: 0px 500px; */
-  background-size: 100%;
-  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: max-content;
+  background-position: 0px 0px;
+  background-repeat: repeat-y;
+  background-size: cover;
 }
 
 .formone {
   float: left;
+  background-color: rgba(255, 0, 0, 0.781);
+  min-height: 400px;
+  border-radius: 25%;
+  box-shadow:  5px 3px 12px gray;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .formtwo {
   float: right;
+  background-color: rgba(128, 0, 128, 0.781);
+  min-height: 400px;
+  border-radius: 25%;
+  box-shadow:  5px 3px 12px gray;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.order {
+  margin-top: 50px;
+  background-color: rgba(30, 143, 255, 0.781);
+  min-height: 350px;
+  border-radius: 25%;
+  box-shadow:  5px 3px 12px gray;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
