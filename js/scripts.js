@@ -90,6 +90,7 @@ $(document).ready(function(){
     pizza.sizeCost(pizza.size);
     order.addPizza(pizza);
     order.displayOrder();
+    $("#custom")[0].reset();
   });
 
   $("ul#order").on("click", "li", function() {
