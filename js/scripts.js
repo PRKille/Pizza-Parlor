@@ -2,7 +2,7 @@
 function Pizza(type, size) {
   this.type = type;
   this.size = size;
-  this.price = price;
+  this.price = 0;
 }
 
 //Base Price Prototype
@@ -30,6 +30,17 @@ Pizza.prototype.sizeCost = function(size) {
 //Display Prototype
 Pizza.prototype.displayOrder = function() {
   var order = $("ul#order");
-  var htmlOrder = "<li>Your Order is:<br>" + this.size + this.type + "<br> Total:" + this.price;
+  var htmlOrder = "<li>Your Order is:<br>" + this.size + " " + this.type + "<br> Total: $" + this.price;
   order.html(htmlOrder);
 }
+
+$(document).ready(function(){
+  $("#order").submit(function(event){
+    event.preventDefault();
+    var pizza = new Pizza($("#pizza").val(), $("#size").val());
+    pizza.basePrice(pizza.type);
+    pizza.sizeCost(pizza.size);
+    console.log(pizza);
+    pizza.displayOrder();
+  });
+});
