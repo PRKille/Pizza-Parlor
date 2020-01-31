@@ -20,9 +20,9 @@ Pizza.prototype.basePrice = function(type) {
 
 //Size Price Adjuster Prototype
 Pizza.prototype.sizeCost = function(size) {
-  if (size === "Med") {
+  if (size === "Medium") {
     this.price += 2;
-  } else if (size === "Lrg") {
+  } else if (size === "Large") {
     this.price += 4;
   }
 }
