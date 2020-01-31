@@ -11,14 +11,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <div class="formone">
+        <div class="form-group formone">
           <h2>Make your own pie!</h2>
           <form id="custom">
-            <select id="size">
+            <select class="form-control" id="size">
               <option>Small</option>
               <option>Medium</option>
               <option>Large</option>
-            </select><br>
+            </select>
             <input type="checkbox" name="custompie" value="Pepperoni">Pepperoni<br>
             <input type="checkbox" name="custompie" value="Sausage">Sausage<br>
             <input type="checkbox" name="custompie" value="Pineapple">Pineapple<br>
@@ -26,39 +26,61 @@
             <input type="checkbox" name="custompie" value="Mushrooms">Mushrooms<br>
             <input type="checkbox" name="custompie" value="Olives">Olives<br>
             <input type="checkbox" name="custompie" value="Red Onion">Red Onion<br>
-            <button type="button" id="newpie">Add Pizza!</button>
+            <button type="button" class="btn btn-success" id="newpie">Add Pizza!</button>
           </form>
         </div>
       </div>
       <div class="col-md-4">
         <div class="order">
+          <h4>Your Order:</h4>
           <ul id="order">
-            <h4>Your Order:</h4>
 
           </ul>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="formtwo">
+        <div class="form-group formtwo">
           <h2>Or try one of ours!</h2>
           <form id="house">
-            <select id="pizza">
+            <select class="form-control" id="pizza">
               <option>Leo</option>
               <option>Mikey</option>
               <option>Donnie</option>
               <option>Raph</option>
             </select>
             <br>
-            <select id="housesize">
+            <select class="form-control" id="housesize">
               <option>Small</option>
               <option>Medium</option>
               <option>Large</option>
             </select>
             <br>
-            <button type="button" id="housepie">Add Pizza!</button>
+            <button type="button" class="btn btn-success" id="housepie">Add Pizza!</button>
           </form>
         </div>
       </div>
+    </div>
+    <div class="row ourpies">
+      <div class="col-md-3">
+        <h5 class="Leo">The Leo</h5>
+        <p class="Leo">Our take on the classic margherita!</p>
+        <p class="Leo">Made with three kinds of mozzarella, two kinds of basil, and only the best heirloom tomatoes!</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="Donnie">The Donnie</h5>
+        <p class="Donnie">Scientifically sublime!</p>
+        <p class="Donnie">Sausage, mushrooms, olives, and red onion will always be a winning combo!</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="Mikey">The Mikey</h5>
+        <p class="Mikey">Surfs up with this amazing hawaiian!</p>
+        <p class="Mikey">OP sweetheart ham and charred pineapple will have you saying "Cowabunga" in no time!</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="Raph">The Raph</h5>
+        <p class="Raph">Not for the faint of heart!</p>
+        <p class="Raph">Pepperoni and Mama Lil's peppers are pushed to the limit with te addition of ghost pepper goat cheese and our special spicy secret sauce!</p>
+      </div>      
     </div>
   </div>
 </body>
