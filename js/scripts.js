@@ -19,7 +19,7 @@ Order.prototype.assignNum = function() {
 //Display Prototype
 Order.prototype.displayOrder = function() {
   var order = $("ul#order");
-  var htmlOrder = "<li>Your Order is:</li>";
+  var htmlOrder = "<h3>Your Order is:</h3>";
   this.pizzas.forEach(function(pizza) {
     htmlOrder += "<li id=" + pizza.num + ">" + pizza.size + " " + pizza.toppings + " $" + pizza.price + "</li>"
   });
@@ -27,7 +27,7 @@ Order.prototype.displayOrder = function() {
   this.pizzas.forEach(function(pizza){
     total += pizza.price;
   });
-  htmlOrder += "Total: $" + total;
+  htmlOrder += "Total: $" + total + "<br> Click on a pizza to remove it from your order";
   order.html(htmlOrder);
 }
 
@@ -71,12 +71,11 @@ Pizza.prototype.sizeCost = function(size) {
 
 $(document).ready(function(){
   var order = new Order();
-  $("#order").click(function(event){
+  $("#housepie").click(function(event){
     var pizza = new Pizza($("#housesize").val());
     pizza.toppings.push($("#pizza").val());
     pizza.basePrice(pizza.toppings[0]);
     pizza.sizeCost(pizza.size);
-    console.log(pizza); 
     order.addPizza(pizza);
     order.displayOrder();
   });
@@ -90,4 +89,9 @@ $(document).ready(function(){
     order.addPizza(pizza);
     order.displayOrder();
   });
+  $("ul#order").on("click", "li", function() {
+    console.log(this.id);
+    delete order.pizzas[this.id -1];
+    order.displayOrder();
+  })
 });
