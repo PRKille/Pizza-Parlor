@@ -8,7 +8,22 @@
   <title>Turtle Pizza!</title>
 </head>
 <body>
-  <form id="order">
+  <form id="custom">
+    <select id="size">
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select><br>
+    <input type="checkbox" name="custompie" value="Pepperoni">Pepperoni<br>
+    <input type="checkbox" name="custompie" value="Sausage">Sausage<br>
+    <input type="checkbox" name="custompie" value="Pineapple">Pineapple<br>
+    <input type="checkbox" name="custompie" value="Mama Lil'">Mama Lil's<br>
+    <input type="checkbox" name="custompie" value="Mushrooms">Mushrooms<br>
+    <input type="checkbox"  name="custompie"value="Olives">Olives<br>
+    <input type="checkbox" name="custompie" value="Red Onion">Red Onion<br>
+    <button type="submit">Add Pizza!</button>
+  </form>
+  <form id="house">
   <select id="pizza">
     <option>Leo</option>
     <option>Mikey</option>
@@ -22,7 +37,7 @@
   </select>
   <button type="submit">Order!</button>
   <ul id="order">
-    
+
   </ul>
 </form>
 </body>

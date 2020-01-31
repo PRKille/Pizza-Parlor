@@ -40,7 +40,14 @@ $(document).ready(function(){
     var pizza = new Pizza($("#pizza").val(), $("#size").val());
     pizza.basePrice(pizza.type);
     pizza.sizeCost(pizza.size);
-    console.log(pizza);
     pizza.displayOrder();
+  });
+  $("#custom").submit(function(event){
+    event.preventDefault();
+    var toppings = [];
+    $("input[name=custompie]:checked").each(function() {
+      toppings.push(this.value);
+    });
+    console.log(toppings);
   });
 });
