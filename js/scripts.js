@@ -27,7 +27,7 @@ Order.prototype.displayOrder = function() {
   this.pizzas.forEach(function(pizza){
     total += pizza.price;
   });
-  htmlOrder += "Total: $" + total + "<br> Click on a pizza to remove it from your order";
+  htmlOrder += "Total: $" + total + `<br> <p class="tiny"> Click on a pizza to remove it from your order</p>`;
   order.html(htmlOrder);
   $(".order").show();
 }
