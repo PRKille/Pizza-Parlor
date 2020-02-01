@@ -30,14 +30,12 @@ Description | Input | Output
 | Check pizza property to find base cost | pizza | $12 |
 | Adjust base cost for size | lrg | +$4 |
 | Display pizza type, size, and cost | Submit | Your pizza is: $16 for a large pepperoni |
+| Allow for multiple pizzas to be ordered at once and display total | pizza1 pizza2 | total cost |
+| Allow deletion of miss ordered pizza | click pizza 2 | pizza 2 removed |
 
 ## Support and Contact
 
 For questions, concerns, or collaboration, please contact me directly.
-
-## Known Bugs
-Work in progress.
-
 
 ## Technologies Used
 
@@ -52,6 +50,5 @@ _This website was created with:_
 ## License
 
 *MIT*
-
 
 Copyright (c) 2020 **_Patrick Kille_**

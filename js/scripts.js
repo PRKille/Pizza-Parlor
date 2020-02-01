@@ -96,5 +96,5 @@ $(document).ready(function(){
   $("ul#order").on("click", "li", function() {
     delete order.pizzas[this.id -1];
     order.displayOrder();
-  })
+  });
 });
