@@ -26,12 +26,12 @@ Following this, you may choose to open/view one or all of the documents within t
 
 Description | Input | Output
 |:---------|:-------|:---------|
-| Take user input and create pizza object | Pizza, Size | pizza (pizza, size) |
-| Check pizza property to find base cost | pizza | $12 |
+| Take user input and create pizza object | Pizza type/toppings, Size | pizza(size) |
+| Check pizza type or toppings property to find base cost | type / toppings | $12 |
 | Adjust base cost for size | lrg | +$4 |
 | Display pizza type, size, and cost | Submit | Your pizza is: $16 for a large pepperoni |
 | Allow for multiple pizzas to be ordered at once and display total | pizza1 pizza2 | total cost |
-| Allow deletion of miss ordered pizza | click pizza 2 | pizza 2 removed |
+| Allow deletion of miss-ordered pizza | click pizza 2 | pizza 2 removed |
 
 ## Support and Contact
 
