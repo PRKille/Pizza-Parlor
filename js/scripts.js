@@ -28,7 +28,6 @@ Order.prototype.displayOrder = function() {
     total += pizza.price;
   });
   htmlOrder += "Total: $" + total + `<br> <p class="tiny"> Click on a pizza to remove it from your order</p>`;
-  // order.html(htmlOrder);
   return htmlOrder;
 }
 
@@ -105,6 +104,7 @@ $(document).ready(function(){
 
   $("ul#order").on("click", "li", function() {
     delete order.pizzas[this.id -1];
-    order.displayOrder();
+    $("ul#order").html(order.displayOrder())
+    $(".order").show();
   });
 });
