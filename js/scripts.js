@@ -28,29 +28,32 @@ Order.prototype.displayOrder = function() {
     total += pizza.price;
   });
   htmlOrder += "Total: $" + total + `<br> <p class="tiny"> Click on a pizza to remove it from your order</p>`;
-  order.html(htmlOrder);
-  $(".order").show();
+  // order.html(htmlOrder);
+  return htmlOrder;
 }
 
 //Pizza Object Constructor
-function Pizza(size) {
+function Pizza() {
   this.toppings = [];
-  this.size = size;
+  this.size;
   this.price = 0;
 }
 
 //Base Price Prototype
-Pizza.prototype.basePrice = function(toppings) {
-  if (toppings === "Leo") {
+Pizza.prototype.basePrice = function(options) {
+  for (i = 0; i < options.length; i++){
+    this.toppings.push(options[i]);
+  }
+  if (this.toppings[0] === "Leo") {
     this.price = 15;
-  } else if (toppings === "Donnie") {
+  } else if (this.toppings[0] === "Donnie") {
     this.price = 16;
-  } else if (toppings === "Mikey") {
+  } else if (this.toppings[0] === "Mikey") {
     this.price = 17;
-  } else if (toppings === "Raph") {
+  } else if (this.toppings[0] === "Raph") {
     this.price = 18;
   } else {
-    toppings.forEach(topping => {
+    this.toppings.forEach(topping => {
       if (topping === "Pepperoni" || topping === "Sausage" || topping === "Mama Lil's"){
         this.price += 4;
       } else {
@@ -62,6 +65,7 @@ Pizza.prototype.basePrice = function(toppings) {
 
 //Size Price Adjuster Prototype
 Pizza.prototype.sizeCost = function(size) {
+  this.size = size;
   if (size === "Medium") {
     this.price += 2;
   } else if (size === "Large") {
@@ -73,23 +77,29 @@ Pizza.prototype.sizeCost = function(size) {
 $(document).ready(function(){
   var order = new Order();
   $("#housepie").click(function(event){
-    var pizza = new Pizza($("#housesize").val());
-    pizza.toppings.push($("#pizza").val());
-    pizza.basePrice(pizza.toppings[0]);
-    pizza.sizeCost(pizza.size);
+    var pizza = new Pizza();
+    var size = $("#housesize").val();
+    var toppings = [];
+    toppings.push($("#pizza").val());
+    pizza.basePrice(toppings);
+    pizza.sizeCost(size);
     order.addPizza(pizza);
-    order.displayOrder();
+    $("ul#order").html(order.displayOrder())
+    $(".order").show();
   });
 
   $("#newpie").click(function(event){
-    var pizza = new Pizza($("#size").val());
+    var pizza = new Pizza();
+    var size = $("#size").val();
+    var toppings = [];
     $("input[name=custompie]:checked").each(function() {
-      pizza.toppings.push(this.value);
+      toppings.push(this.value);
     });
-    pizza.basePrice(pizza.toppings);
-    pizza.sizeCost(pizza.size);
+    pizza.basePrice(toppings);
+    pizza.sizeCost(size);
     order.addPizza(pizza);
-    order.displayOrder();
+    $("ul#order").html(order.displayOrder())
+    $(".order").show();
     $("#custom")[0].reset();
   });
 
